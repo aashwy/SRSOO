@@ -17,17 +17,21 @@ namespace SRSOO.SqlServerDAL
            throw new NotImplementedException();
        }
 
-       public Course GetCourse(string courseNumber)
+
+       public Section GetSection (int sectionNumber)
        {
-           string sql = "select * from Course where CourseNumber='{0}'".FormatWith(courseNumber);
+           string sql = "select * from Section where SectionNumber='{0}'".FormatWith(sectionNumber);
            SqlDataReader dr = SqlHelper.ExecuteReader(ConStr, CommandType.Text, sql);
            if (dr.HasRows == false) return null;
            dr.Read();
-           var course = new Course(dr["CourseNumber"].ToString(), dr["CourseName"].ToString(), dr["Credit"].ConvertToDouble());
+           var courseDao = new CourseDao();
+           var sec = new Section(dr["SectionNumber"].ConvertToIntBaseZero(), dr["DayWeek"].ToString(), dr["TimeOfDay"].ToString(),
+               courseDao.GetCourse(dr["RepresentedCouse"].ConvertToString()),dr["Room"].ToString(),dr["Capacity"].ConvertToIntBaseZero());
            dr.Close();
            dr.Dispose();
-           return course;
+           return sec;
        }
+
 
        public void GetPreRequisites(Course course)
        {

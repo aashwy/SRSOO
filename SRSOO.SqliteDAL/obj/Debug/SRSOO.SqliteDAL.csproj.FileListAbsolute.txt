@@ -24,3 +24,18 @@ F:\e\教学\系统分析与设计\第七版课件\第七版32学时\code\github\
 F:\e\教学\系统分析与设计\第七版课件\第七版32学时\code\github\assignments\SRSOO\SRSOO\SRSOO.SqliteDAL\bin\Debug\SRSOO.SqliteDAL.pdb
 F:\e\教学\系统分析与设计\第七版课件\第七版32学时\code\github\assignments\SRSOO\SRSOO\SRSOO.SqliteDAL\bin\Debug\System.Data.SQLite.dll
 F:\e\教学\系统分析与设计\第七版课件\第七版32学时\code\github\assignments\SRSOO\SRSOO\SRSOO.SqliteDAL\bin\Debug\System.Data.SQLite.xml
+F:\wy\the last work\SRSOO.SqliteDAL\bin\Debug\SRSOO.SqliteDAL.dll
+F:\wy\the last work\SRSOO.SqliteDAL\bin\Debug\SRSOO.SqliteDAL.pdb
+F:\wy\the last work\SRSOO.SqliteDAL\bin\Debug\SRSOO.IDAL.dll
+F:\wy\the last work\SRSOO.SqliteDAL\bin\Debug\SRSOO.Model.dll
+F:\wy\the last work\SRSOO.SqliteDAL\bin\Debug\SRSOO.Util.dll
+F:\wy\the last work\SRSOO.SqliteDAL\bin\Debug\System.Data.SQLite.dll
+F:\wy\the last work\SRSOO.SqliteDAL\bin\Debug\Newtonsoft.Json.dll
+F:\wy\the last work\SRSOO.SqliteDAL\bin\Debug\SRSOO.IDAL.pdb
+F:\wy\the last work\SRSOO.SqliteDAL\bin\Debug\SRSOO.Model.pdb
+F:\wy\the last work\SRSOO.SqliteDAL\bin\Debug\SRSOO.Util.pdb
+F:\wy\the last work\SRSOO.SqliteDAL\bin\Debug\System.Data.SQLite.xml
+F:\wy\the last work\SRSOO.SqliteDAL\bin\Debug\Newtonsoft.Json.xml
+F:\wy\the last work\SRSOO.SqliteDAL\obj\Debug\SRSOO.SqliteDAL.csprojResolveAssemblyReference.cache
+F:\wy\the last work\SRSOO.SqliteDAL\obj\Debug\SRSOO.SqliteDAL.dll
+F:\wy\the last work\SRSOO.SqliteDAL\obj\Debug\SRSOO.SqliteDAL.pdb

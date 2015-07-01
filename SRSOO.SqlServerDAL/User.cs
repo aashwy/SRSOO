@@ -26,7 +26,7 @@ namespace SRSOO.SqlServerDAL
     
     
     
-    public class UserDAO: DataBase, IUser
+    public class Student: DataBase, IUser
     {
         public void Insert(User user)
         {

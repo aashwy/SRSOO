@@ -11,7 +11,13 @@ public class WebBasePage: System.Web.UI.Page
     {
         get
         {
-            return Session["CurrentUser"] as User;
+            if (Session["CurrentUser"] == null)
+            {
+                //转到登陆界面
+                return null;
+            }
+            else { 
+            return Session["CurrentUser"] as User;}
         }
     }
 }

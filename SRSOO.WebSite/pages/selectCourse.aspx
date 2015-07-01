@@ -68,7 +68,17 @@
             }
         );
     }    //从服务器加载当前登陆学生已选课程    function loadResigistion() {
-    }    function moveToLeft() {
+    }    function loadStudentInfo() {
+        $.post(
+            "selectCourse.aspx?Action=LoadStudentInfo",//从客户端获取stu的信息
+            function (reslut) {
+                var json = $.parseJSON(reslut);//把字符串解析成json对象
+                //获取json对象的值：id，name等
+                $.ligerul.get("ID").setValue(Json.Id);
+                $.ligerul.get("StudentName").setValue(json.Name);
+                liger.get("listbox2").setData(json.Attends);
+            }        );
+    }    function moveToLeft() {
         var box1 = liger.get("listbox1"), box2 = liger.get("listbox2");
         var selecteds = box2.getSelectedItems();
         if (!selecteds || !selecteds.length) return;
