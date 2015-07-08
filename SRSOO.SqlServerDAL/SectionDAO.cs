@@ -10,7 +10,7 @@ using System.Web;
 using SRSOO.IDAL;
 using SRSOO.Util.Data;
 using SRSOO.Util.Extension;
-
+//hjk
 namespace SRSOO.SqlServerDAL
 {
    public class SectionDAO : DataBase, ISection
