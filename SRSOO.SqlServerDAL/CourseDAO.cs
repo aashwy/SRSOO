@@ -10,7 +10,7 @@ using SRSOO.Util.Extension;
 
 namespace SRSOO.SqlServerDAL
 {
-   public class CourseDAO: DataBase, ICourse
+   public class CousrseDAO: DataBase, ICourse
     {
        public void Insert(Course course)
        {

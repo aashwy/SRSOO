@@ -58,7 +58,9 @@
         });
 
         loadSchedule();
-    });    //从服务器加载选课列表    function loadSchedule() {
+    });
+    //从服务器加载选课列表
+    function loadSchedule() {
         $.post(
             "selectCourse.aspx?Action=LoadSchedule",
             function (reslut) {
@@ -67,8 +69,12 @@
                 
             }
         );
-    }    //从服务器加载当前登陆学生已选课程    function loadResigistion() {
-    }    function loadStudentInfo() {
+    }
+    //从服务器加载当前登陆学生已选课程
+    function loadResigistion() {
+
+    }
+    function loadStudentInfo() {
         $.post(
             "selectCourse.aspx?Action=LoadStudentInfo",//从客户端获取stu的信息
             function (reslut) {
@@ -77,8 +83,11 @@
                 $.ligerul.get("ID").setValue(Json.Id);
                 $.ligerul.get("StudentName").setValue(json.Name);
                 liger.get("listbox2").setData(json.Attends);
-            }        );
-    }    function moveToLeft() {
+
+            }
+        );
+    }
+    function moveToLeft() {
         var box1 = liger.get("listbox1"), box2 = liger.get("listbox2");
         var selecteds = box2.getSelectedItems();
         if (!selecteds || !selecteds.length) return;
@@ -105,5 +114,7 @@
         if (!selecteds || !selecteds.length) return;
         box2.addItems(selecteds);
         box1.removeItems(selecteds);
-    }</script>
+    }
+
+</script>
 </html>

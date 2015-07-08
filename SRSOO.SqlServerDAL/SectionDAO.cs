@@ -2,45 +2,62 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.IO;
 using System.Linq;
+using System.Net.Mime;
 using System.Text;
+using System.Web;
 using SRSOO.IDAL;
 using SRSOO.Util.Data;
 using SRSOO.Util.Extension;
 
 namespace SRSOO.SqlServerDAL
 {
-   public class CourseDAO: DataBase, ICourse
+   public class SectionDAO : DataBase, ISection
     {
-       public void Insert(Course course)
-       {
-           throw new NotImplementedException();
-       }
+      
 
 
        public Section GetSection (int sectionNumber)
        {
-           string sql = "select * from Section where SectionNumber='{0}'".FormatWith(sectionNumber);
+           string sql = "select * from Section where SectionNumber={0}".FormatWith(sectionNumber);
            SqlDataReader dr = SqlHelper.ExecuteReader(ConStr, CommandType.Text, sql);
            if (dr.HasRows == false) return null;
            dr.Read();
-           var courseDao = new CourseDao();
-           var sec = new Section(dr["SectionNumber"].ConvertToIntBaseZero(), dr["DayWeek"].ToString(), dr["TimeOfDay"].ToString(),
-               courseDao.GetCourse(dr["RepresentedCouse"].ConvertToString()),dr["Room"].ToString(),dr["Capacity"].ConvertToIntBaseZero());
+           var courseDao = new CousrseDAO();
+           var sec = new Section(dr["SectionNumber"].ConvertToIntBaseZero(),
+                                 dr["DayOfWeek"].ToString(),
+                                 dr["TimeOfDay"].ToString(),
+                                 courseDao.GetCourse(dr["RepresentedCourse"].ConvertToString()),
+                                 dr["Room"].ToString(),
+                                 dr["SeatingCapacity"].ConvertToIntBaseZero());
            dr.Close();
            dr.Dispose();
+
            return sec;
        }
 
 
-       public void GetPreRequisites(Course course)
+
+
+
+
+
+
+
+       public void Insert(Section section)
        {
-           string sql = "select * from Prerequisite where CourseNumber='{0}'".FormatWith(course.CourseNumber);
-           DataTable dt = SqlHelper.ExecuteDataset(ConStr, CommandType.Text, sql).Tables[0];
-           for (int i = 0; i < dt.Rows.Count; i++)
-           {
-               course.AddPrerequisite(GetCourse(dt.Rows[i]["Prerequisite"].ConvertToString()));
-           }
+           throw new NotImplementedException();
+       }
+
+       public Section GeSection(int id)
+       {
+           throw new NotImplementedException();
+       }
+
+       public Section GetSection(string sectionName)
+       {
+           throw new NotImplementedException();
        }
     }
 }
